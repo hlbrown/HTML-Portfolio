@@ -1,13 +1,7 @@
-/* .card-body {
-    flex: 1 1 auto;
-    padding: 1rem 1rem;
+.project-row > div[class*='col-'] {
+  display: flex;
+  flex:1 0 auto;
 }
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-div {
-    display:block;
-} */
 .projects-border {
     display: block;
     width: 120px;
@@ -22,3 +16,12 @@ div {
     background: #f1e78f;
     margin: 20px auto;
 }
+.card-footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        align-self: flex-end;
+        width:100%;
+    }
+
+
