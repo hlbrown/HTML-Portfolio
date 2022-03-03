@@ -23,5 +23,11 @@
         align-self: flex-end;
         width:100%;
     }
+.frontEnd-card{
+    border:3px solid #8ff1bb;
 
+}
+.top-buffer{
+    margin-top: 20px;
+}
 
