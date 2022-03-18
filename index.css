@@ -1,3 +1,163 @@
+:root {
+  --left-header: #ffbf00;
+  --right-header: #00abff;
+  --vertical-margin: 4em;
+  --alt-font-color: #1d1d1d;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#0d142b;
+    color:white;
+}
+.navbar-custom{
+    background-color: #080818;
+    color:azure;
+}
+nav .navbar-nav li a,
+nav .navbar-brand{
+    color:azure;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(240,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler.navbar-toggler{
+border-color:azure;
+}
+
+/* projects styling */
+
+.featured-project {
+    position: relative;
+    box-sizing: content-box;
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #f13232, #a053df);
+    border-image-slice: 1;
+    padding: 1.5em;
+    margin: 0em 1.5em var(--vertical-margin) 1.5em;
+}
+.project-icons-container {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+}
+div {
+    display: block;
+}
+
+.text-right{
+    text-align: right;
+}
+.text-left {
+    text-align: left!important;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.fa-ul {
+    list-style-type: none;
+    margin-left: 2.5em;
+    padding-left: 0;
+}
+.fa-ul>li {
+    position: relative;
+}
+.alt-font {
+    font-family: "Inconsolata";
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+/* styling for github and live URL links*/
+.project-icons-container a {
+    padding: 0em 0.25em;
+    color: black;
+}
+
+.fab, .far {
+    font-weight: 400;
+}
+.fab {
+    font-family: "Font Awesome 5 Brands";
+}
+.fa-3x {
+    font-size: 3em;
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.fa-github:before {
+    content: "\f09b";
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+
+/* styling for the projects images */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.project-card {
+ background-color: transparent;
+  margin: 0em 1.5em;
+  margin-bottom: var(--vertical-margin);
+}
+
+.project-card .text-left li {
+  display: inline;
+  margin-right: 2em;
+}
+
+.project-icons-container {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.project-card .text-right li {
+  display: inline;
+  margin-left: 2em;
+}
+
+.project-icons-container a {
+  padding: 0em .25em;
+  color: black;
+}
+.project-img-container {
+  position: relative;
+  margin-bottom: 0.75em;
+}
+.project-icons-container .light {
+  color: white;
+}
+
+.project-icons-container a:hover {
+  color: var(--right-header);
+  text-decoration: none;;
+}
+
+
+
 .project-row > div[class*='col-'] {
   display: flex;
   flex:1 0 auto;
@@ -23,10 +183,17 @@
         align-self: flex-end;
         width:100%;
     }
+
 .frontEnd-card{
-    border:3px solid #8ff1bb;
+ border:10px solid;
+ border-image-slice:1;
+ border-width: 5px;  
 
 }
+.border-gradient-purple{
+    border-image-source: linear-gradient(to left,#743ad5, #d53a9d );
+}
+
 .top-buffer{
     margin-top: 20px;
 }
@@ -36,10 +203,57 @@
   right: 20px;
   display: none;
 }
-.footer {
+footer {
     bottom: 0px;
-    width: 100%;
-    height: 50px;
-    background-color: #F5F5F5;
+    padding:3rem;
+    background-color: #080818;
+    color:azure;
+    opacity: 100;
+}
+/* projects styling */
+#projects-title{
+    left: -41px;
+    bottom: -117px;
 }
 
+.royg-border{
+    border-image-source: linear-gradient(to left, lime, var(--left-header));
+    border-radius: 0px;
+    border-image-slice: 1;
+    border-width: 5px;
+    padding: 3em;
+}
+.biv-border {
+  border-image-source: linear-gradient(to left, hotpink, var(--right-header));
+  border-radius: 0px;
+  border-image-slice: 1;
+  border-width: 5px;
+  padding: 3em;
+}
+#projects .card-img-top {
+  border-radius: 0px;
+}
+
+.projects .fa-ul {
+  margin: 0em 0em 0em 1.5em;
+}
+
+.project-title {
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+
+@media (min-width:768px){
+.col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.col-md-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+}
+}
