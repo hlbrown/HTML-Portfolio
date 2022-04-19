@@ -176,6 +176,23 @@ img {
     background: #f1e78f;
     margin: 20px auto;
 }
+.card-header{
+        background-color:#0d142b;
+    color:white;
+}
+.card-body{
+    background-color:#0d142b;
+
+}
+.skills-cards{
+    transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+    transition: all .4s;
+    transform-style: preserve-3d;
+}
+.skills-cards:hover{
+    transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+}
 .card-footer {
         display: flex;
         flex-direction: column;
