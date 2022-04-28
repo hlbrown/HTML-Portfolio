@@ -3,7 +3,13 @@
   --right-header: #00abff;
   --vertical-margin: 4em;
   --alt-font-color: #1d1d1d;
+  --maxWidth : 960px;
+  --cardWidth : 300px;
+  --cardHeight : 275px;
+  --colorMain : #3498db;
 }
+
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -180,15 +186,7 @@ li {
     background-color:#0d142b;
 
 }
-.skills-cards{
-    transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
-    transition: all .4s;
-    transform-style: preserve-3d;
-}
-.skills-cards:hover{
-    transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
-  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
-}
+
 .card-footer {
         display: flex;
         flex-direction: column;
@@ -258,7 +256,192 @@ footer {
 }
 
 
-@media (min-width:768px){
+/* skills styling */
+.card-flip > div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+}
+.card-flip-pink > div{
+    box-shadow: 0 3px 20px pink;
+}
+
+.card-flip-blue > div{
+    box-shadow: 0 3px 20px rgb(7, 199, 247);
+}
+
+.card-flip-green > div{
+    box-shadow: 0 3px 20px rgb(143, 241, 143);
+}
+.card-flip-yellow > div{
+    box-shadow: 0 3px 20px rgb(253, 249, 1);
+}
+
+
+.card-flip{
+    border-radius: 9px;
+    width:100%;
+    margin-top:20px;
+    border: 0 none;
+
+}
+.card .card-body, .card-back .card-body{
+    height: 380px;
+}
+
+
+.card-front{
+    transform: rotateY(0deg);
+    height:100%;
+   
+}
+.card .card-flip{
+    height: 700px;
+}
+.card-back{
+    transform: rotateY(180deg);
+    position: absolute;
+    top:0;
+}
+.card-flip:hover .card-front{
+    transform: rotateY(-180deg);
+}
+.card-flip:hover .card-back{
+    transform: rotateY(0deg);
+}
+
+
+/* 
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.cardBox .card {
+  background: #222;
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.cardBox .card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+.card .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: cornflowerblue;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: yellowgreen;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: tomato;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+} */
+
+/* @-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+} */
+
+
+    
+
+/* @media (min-width:768px){
 .col-md-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -268,5 +451,24 @@ footer {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
-}
-}
+} */
+/* .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  .cardBox .card {
+    height: 385px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+} */
+/* @media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
+  }
+  .cardBox .card {
+    height: 380px;
+  }
+} */
